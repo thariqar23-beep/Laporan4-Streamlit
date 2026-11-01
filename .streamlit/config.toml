@@ -3,11 +3,11 @@ toolbarMode = "minimal"
 
 [theme]
 base = "light"
-primaryColor = "#141414"
-backgroundColor = "#f2f4f7"
+primaryColor = "#14213d"
+backgroundColor = "#ffffff"
 secondaryBackgroundColor = "#eef0f3"
-textColor = "#0a0a0a"
-borderColor = "#e6e6e6"
-baseRadius = "8px"
+textColor = "#0f172a"
+borderColor = "#d9dde4"
+baseRadius = "6px"
 baseFontSize = 14
-font = "Geist:https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&display=swap"
+font = "IBM Plex Sans:https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap"
