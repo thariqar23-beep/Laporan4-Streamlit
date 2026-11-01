@@ -24,36 +24,33 @@ GAYA_THRQ = """<style>
 div[data-testid="stElementContainer"]:has(style) {display: none;}
 .stApp {background: #14213d;}
 [data-testid="stHeader"] {background: transparent;}
-.block-container {max-width: none; padding: 0 8px 8px;}
-.st-key-bilah_thrq {padding: 10px 16px 8px;}
-.identitas-thrq {display: flex; align-items: center; gap: 12px; color: #ffffff;}
-.identitas-thrq img {height: 44px; width: auto; flex: none;}
-h1.judul-thrq {color: #ffffff; font-size: 20px !important; font-weight: 600 !important; line-height: 1.2; padding: 0 !important; margin: 0;}
-.identitas-thrq p {color: #c5cbd8; font-size: 13px; margin: 1px 0 0;}
-.merek-logo-thrq {display: flex; justify-content: flex-end; align-items: center; gap: 24px;}
-.merek-logo-thrq img {height: 26px; width: auto; filter: brightness(0) invert(1);}
-.logo-Nike-thrq {height: 16px !important;}
-.st-key-bilah_thrq [data-testid="stButtonGroup"] button {background: transparent !important; border: 0 !important; border-bottom: 2px solid transparent !important; border-radius: 0 !important; color: #c5cbd8 !important; box-shadow: none !important;}
-.st-key-bilah_thrq [data-testid="stButtonGroup"] button * {color: inherit !important;}
-.st-key-bilah_thrq [data-testid="stButtonGroup"] button[aria-checked="true"] {border-bottom-color: #ffffff !important; color: #ffffff !important; font-weight: 600;}
-.st-key-lembar_thrq {background: #ffffff; border-radius: 16px; padding: 20px; min-height: calc(100vh - 80px);}
-div[data-testid="stElementContainer"]:has(.status-thrq) {margin-top: auto;}
+.block-container {max-width: 1200px; padding: 0 32px 24px;}
+.kepala-thrq {display: flex; align-items: center; gap: 16px; background: #ffffff; width: 100vw; margin: 0 calc(50% - 50vw) 20px;
+  padding: 18px max(32px, calc(50vw - 568px)); border-bottom: 3px solid #c9a227;}
+[data-testid="stMain"] {overflow-x: clip;}
+.kepala-thrq .usk-thrq {height: 64px; width: auto; flex: none;}
+h1.judul-thrq {font-size: 24px !important; font-weight: 600 !important; color: #14213d; line-height: 1.2; padding: 0 !important; margin: 0;}
+.kepala-thrq p {color: #4a5365; font-size: 14px; margin: 2px 0 0;}
+.merek-logo-thrq {margin-left: auto; display: flex; align-items: center; gap: 28px;}
+.merek-logo-thrq img {height: 32px; width: auto; transition: opacity .2s;}
+.logo-Nike-thrq {height: 20px !important;}
+[class*="st-key-panel"] {background: #ffffff; border-radius: 12px; padding: 24px;}
+[data-testid="stButtonGroup"] button {background: transparent !important; border: 0 !important; border-bottom: 2px solid transparent !important; border-radius: 0 !important; color: #4a5365 !important; box-shadow: none !important;}
+[data-testid="stButtonGroup"] button * {color: inherit !important;}
+[data-testid="stButtonGroup"] button[aria-checked="true"] {border-bottom-color: #14213d !important; color: #14213d !important; font-weight: 600;}
 h2.bagian-thrq {font-size: 16px !important; font-weight: 600 !important; padding: 0 !important; margin: 0 0 4px;}
-.slot-thrq {display: flex; align-items: center; justify-content: center; height: min(640px, calc(100vh - 230px)); min-height: 360px; width: 100%;
+.slot-thrq {display: flex; align-items: center; justify-content: center; height: 420px; width: 100%;
   background: #eef0f3; border-radius: 10px; color: #4a5365; font-size: 14px; text-align: center; padding: 16px;}
-.st-key-kanvas_thrq div[data-testid="stImage"] img {width: 100%; height: min(640px, calc(100vh - 230px)); min-height: 360px; object-fit: contain; background: #eef0f3; border-radius: 10px;}
-[data-testid="stFileUploader"] label {display: none;}
-[data-testid="stFileUploaderDropzone"] {padding: 10px; background: #eef0f3; flex-wrap: wrap; gap: 6px;}
-[data-testid="stFileUploaderDropzone"] section, [data-testid="stFileUploaderDropzoneInstructions"] {width: 100%;}
-.st-key-contoh_thrq div[data-testid="stHorizontalBlock"] {flex-wrap: nowrap; align-items: center; gap: 10px;}
-.st-key-contoh_thrq div[data-testid="stColumn"]:nth-child(1) {flex: 0 0 52px; width: 52px; min-width: 0;}
-.st-key-contoh_thrq div[data-testid="stColumn"]:nth-child(2) {flex: 1 1 0; min-width: 0;}
-.st-key-contoh_thrq div[data-testid="stImage"] img {width: 52px; height: 52px; object-fit: cover; border-radius: 6px;}
+.st-key-kanvas_thrq div[data-testid="stImage"] img {width: 100%; height: 420px; object-fit: contain; background: #eef0f3; border-radius: 10px;}
+[data-testid="stFileUploader"] label {font-size: 13px; color: #4a5365;}
+[data-testid="stFileUploaderDropzone"] {padding: 10px 14px; background: #eef0f3;}
+.st-key-contoh_thrq div[data-testid="stImage"] img {width: 100%; height: 96px; object-fit: contain; background: #eef0f3; border-radius: 6px;}
 .st-key-contoh_thrq [data-testid="stElementToolbar"] {display: none;}
-.st-key-contoh_thrq button {justify-content: flex-start; background: transparent; border: 0; box-shadow: none; color: #0f172a; padding: 6px 10px;}
-.st-key-contoh_thrq button > div {justify-content: flex-start; width: 100%;}
-.st-key-contoh_thrq button:hover {background: #eef0f3; color: #0f172a;}
-.st-key-contoh_thrq button[kind="primary"] {background: #14213d; color: #ffffff;}
+.st-key-contoh_thrq div[data-testid="stHorizontalBlock"] {flex-wrap: nowrap;}
+.st-key-contoh_thrq div[data-testid="stColumn"] {min-width: 0; flex: 1 1 0;}
+.st-key-contoh_thrq button {background: transparent; border: 1px solid #d9dde4; box-shadow: none; color: #0f172a;}
+.st-key-contoh_thrq button:hover {background: #eef0f3; border-color: #d9dde4; color: #0f172a;}
+.st-key-contoh_thrq button[kind="primary"] {background: #14213d; border-color: #14213d; color: #ffffff;}
 .st-key-contoh_thrq button[kind="primary"] * {color: #ffffff; font-weight: 600;}
 .jawab-thrq {font-size: 28px; font-weight: 600; line-height: 1.2; color: #14213d; margin: 2px 0 2px;}
 .sub-thrq {font-size: 14px; color: #4a5365; margin-bottom: 14px;}
@@ -70,20 +67,18 @@ table.tabel-thrq img {display: block; width: 40px; height: 40px; object-fit: cov
 tr.utama-thrq .jalur-thrq i {background: #14213d;}
 .catatan-thrq {font-size: 13px; color: #92400e; background: #fffbeb; border-radius: 6px; padding: 8px 10px; margin-top: 12px;}
 .bukti-thrq {font-size: 13px; color: #4a5365; line-height: 1.5; margin-top: 12px;}
-.status-thrq {display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 12px; color: #4a5365; padding-top: 10px; border-top: 1px solid #eef0f3; font-variant-numeric: tabular-nums;}
-.status-thrq b {font-weight: 500; color: #0f172a;}
+.status-thrq {display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 12px; color: #c5cbd8; margin-top: 4px; font-variant-numeric: tabular-nums;}
+.status-thrq b {font-weight: 500; color: #ffffff;}
 .status-thrq .nama-thrq {margin-left: auto;}
-@media (min-width: 641px) and (max-width: 1040px) {
-  [data-testid="stHorizontalBlock"]:has(> [data-testid="stColumn"] .st-key-contoh_thrq) {flex-wrap: wrap;}
-  [data-testid="stColumn"]:has(.st-key-contoh_thrq) {flex: 1 1 100%; width: 100%;}
-  .st-key-lembar_thrq [data-testid="stColumn"]:has(.st-key-kanvas_thrq), .st-key-lembar_thrq [data-testid="stColumn"]:has(.jawab-thrq) {flex: 1 1 calc(50% - 16px); width: calc(50% - 16px);}
-  .slot-thrq, .st-key-kanvas_thrq div[data-testid="stImage"] img {height: 340px; min-height: 0;}
-}
-@media (max-width: 800px) {
-  .merek-logo-thrq {justify-content: flex-start;}
-  .st-key-lembar_thrq {padding: 16px; border-radius: 12px;}
-  .slot-thrq {height: 220px; min-height: 0;}
-  .st-key-kanvas_thrq div[data-testid="stImage"] img {height: 300px; min-height: 0;}
+@media (max-width: 640px) {
+  .block-container {padding: 0 16px 24px;}
+  .kepala-thrq {flex-wrap: wrap; gap: 12px; padding: 40px 16px 16px;}
+  .kepala-thrq .usk-thrq {height: 52px;}
+  h1.judul-thrq {font-size: 20px !important;}
+  .merek-logo-thrq {margin-left: 0; width: 100%;}
+  [class*="st-key-panel"] {padding: 16px;}
+  .slot-thrq {height: 220px;}
+  .st-key-kanvas_thrq div[data-testid="stImage"] img {height: 300px;}
   .status-thrq .nama-thrq {margin-left: 0;}
 }
 </style>"""
@@ -193,116 +188,115 @@ slot_logo_thrq = st.empty()                         #thrq redup logo terakhir du
 slot_logo_thrq.markdown(gaya_logo_thrq(st.session_state.merk_thrq), unsafe_allow_html=True)
 st.markdown(GAYA_THRQ, unsafe_allow_html=True)
 
-with st.container(key="bilah_thrq"):
-    identitas_thrq, mode_thrq, logo_kolom_thrq = st.columns([5, 3, 3], gap="medium", vertical_alignment="center")
-    identitas_thrq.markdown(
-        f'<div class="identitas-thrq"><img src="{logo_thrq("usk")}" alt="Logo Universitas Syiah Kuala"><div>'
-        '<h1 class="judul-thrq">Deteksi Merk Sepatu</h1><p>UTS Praktikum Pemrograman Big Data</p></div></div>',
-        unsafe_allow_html=True,
-    )
-    menu_thrq = mode_thrq.segmented_control("Mode", ["Deteksi", "Klasifikasi"], default="Deteksi",
-                                            required=True, label_visibility="collapsed")
-    logo_merek_thrq = "".join(f'<img class="logo-{m}-thrq" src="{logo_thrq(m.lower())}" alt="Logo {m}">' for m in MEREK_LOGO_THRQ)
-    logo_kolom_thrq.markdown(f'<div class="merek-logo-thrq">{logo_merek_thrq}</div>', unsafe_allow_html=True)
+logo_merek_thrq = "".join(f'<img class="logo-{m}-thrq" src="{logo_thrq(m.lower())}" alt="Logo {m}">' for m in MEREK_LOGO_THRQ)
+st.markdown(
+    f'<div class="kepala-thrq"><img class="usk-thrq" src="{logo_thrq("usk")}" alt="Logo Universitas Syiah Kuala"><div>'
+    '<h1 class="judul-thrq">Deteksi Merk Sepatu</h1><p>UTS Praktikum Pemrograman Big Data</p></div>'
+    f'<div class="merek-logo-thrq">{logo_merek_thrq}</div></div>',
+    unsafe_allow_html=True,
+)
 
 model_thrq = muat_yolo_thrq()
 kelas_thrq = list(model_thrq.names.values())        #thrq Adidas, Converse, Nike
 
-with st.container(key="lembar_thrq"):
-    kiri_thrq, tengah_thrq, kanan_thrq = st.columns([2.3, 5.6, 4.1], gap="medium")
+kiri_thrq, kanan_thrq = st.columns([7, 5], gap="small")
+panel_kanan_thrq = kanan_thrq.container(key="panel_kanan_thrq", height="stretch")
+menu_thrq = panel_kanan_thrq.segmented_control("Mode", ["Deteksi", "Klasifikasi"], default="Deteksi",
+                                               required=True, label_visibility="collapsed")
+kotak_hasil_thrq = panel_kanan_thrq.container()
+kotak_ambang_thrq = panel_kanan_thrq.container()
 
-    with kiri_thrq:
-        st.markdown('<h2 class="bagian-thrq">Foto sepatu</h2>', unsafe_allow_html=True)
-        unggah_thrq = st.file_uploader("Foto sepatu (JPG atau PNG)", type=["jpg", "jpeg", "png"],
-                                       key=f"unggah_thrq_{st.session_state.kunci_unggah_thrq}")
-        if unggah_thrq is not None:
-            st.session_state.contoh_thrq = None
-        contoh_thrq = st.session_state.contoh_thrq
-        with st.container(key="contoh_thrq"):
-            st.markdown('<h2 class="bagian-thrq">Foto contoh</h2>', unsafe_allow_html=True)
-            for nama_thrq in MEREK_LOGO_THRQ:
-                foto_kolom_thrq, tombol_kolom_thrq = st.columns([1, 3], gap="small", vertical_alignment="center")
-                foto_kolom_thrq.image(f"{FOLDER_CONTOH_THRQ}/{nama_thrq}.jpg", width=52)
-                tombol_kolom_thrq.button(nama_thrq, key=f"tombol_{nama_thrq}_thrq", width="stretch",
-                                         type="primary" if contoh_thrq == nama_thrq else "secondary",
-                                         on_click=pilih_contoh_thrq, args=(nama_thrq,))
-        conf_thrq = 0.25
-        if menu_thrq == "Deteksi":
-            conf_thrq = st.slider("Ambang keyakinan", 0.05, 0.95, 0.25, 0.05,
-                                  help="Kotak dengan keyakinan di bawah nilai ini tidak ditampilkan.")
-    ambang_teks_thrq = f"{conf_thrq:.2f}".replace(".", ",")
+with kiri_thrq.container(key="panel_kiri_thrq", height="stretch"):
+    slot_gambar_thrq = st.container(key="kanvas_thrq").empty()
+    unggah_thrq = st.file_uploader("Foto sepatu (JPG atau PNG)", type=["jpg", "jpeg", "png"],
+                                   key=f"unggah_thrq_{st.session_state.kunci_unggah_thrq}")
+    if unggah_thrq is not None:
+        st.session_state.contoh_thrq = None
+    contoh_thrq = st.session_state.contoh_thrq
+    with st.container(key="contoh_thrq"):
+        st.markdown('<h2 class="bagian-thrq">Atau coba foto contoh</h2>', unsafe_allow_html=True)
+        for kolom_thrq, nama_thrq in zip(st.columns(3, gap="small"), MEREK_LOGO_THRQ):
+            kolom_thrq.image(f"{FOLDER_CONTOH_THRQ}/{nama_thrq}.jpg", width="stretch")
+            kolom_thrq.button(nama_thrq, key=f"tombol_{nama_thrq}_thrq", width="stretch",
+                              type="primary" if contoh_thrq == nama_thrq else "secondary",
+                              on_click=pilih_contoh_thrq, args=(nama_thrq,))
 
-    img_thrq = None
-    gagal_thrq = False
-    sumber_thrq = unggah_thrq or (f"{FOLDER_CONTOH_THRQ}/{contoh_thrq}.jpg" if contoh_thrq else None)
-    if sumber_thrq is not None:
-        try:
-            img_thrq = Image.open(sumber_thrq).convert("RGB")   #thrq PNG bisa punya kanal alfa
-        except (UnidentifiedImageError, OSError):
-            gagal_thrq = True
-    keterangan_thrq = f"foto contoh {contoh_thrq}" if contoh_thrq else "foto yang diunggah"
+conf_thrq = 0.25
+if menu_thrq == "Deteksi":
+    conf_thrq = kotak_ambang_thrq.slider("Ambang keyakinan", 0.05, 0.95, 0.25, 0.05,
+                                         help="Kotak dengan keyakinan di bawah nilai ini tidak ditampilkan.")
+ambang_teks_thrq = f"{conf_thrq:.2f}".replace(".", ",")
 
-    slot_gambar_thrq = tengah_thrq.container(key="kanvas_thrq").empty()
-    if img_thrq is None:
-        slot_gambar_thrq.markdown('<div class="slot-thrq">Unggah foto atau pilih foto contoh</div>', unsafe_allow_html=True)
+img_thrq = None
+gagal_thrq = False
+sumber_thrq = unggah_thrq or (f"{FOLDER_CONTOH_THRQ}/{contoh_thrq}.jpg" if contoh_thrq else None)
+if sumber_thrq is not None:
+    try:
+        img_thrq = Image.open(sumber_thrq).convert("RGB")   #thrq PNG bisa punya kanal alfa
+    except (UnidentifiedImageError, OSError):
+        gagal_thrq = True
+keterangan_thrq = f"foto contoh {contoh_thrq}" if contoh_thrq else "foto yang diunggah"
 
-    model_nama_thrq = "best.pt" if menu_thrq == "Deteksi" else "classifier_model.h5"
-    status_thrq = [("Model", model_nama_thrq), ("Ukuran foto", "&ndash;"), ("Waktu prediksi", "&ndash;")]
-    if img_thrq is not None:
-        status_thrq[1] = ("Ukuran foto", f"{img_thrq.width} &times; {img_thrq.height} px")
+if img_thrq is None:
+    slot_gambar_thrq.markdown('<div class="slot-thrq">Unggah foto atau pilih foto contoh</div>', unsafe_allow_html=True)
 
-    with kanan_thrq:
-        if gagal_thrq:
-            tulis_hasil_thrq("Berkas tidak terbaca", "Berkas ini bukan gambar yang utuh. Coba unggah foto lain.", tabel_kosong_thrq())
+model_nama_thrq = "best.pt" if menu_thrq == "Deteksi" else "classifier_model.h5"
+status_thrq = [("Model", model_nama_thrq), ("Ukuran foto", "&ndash;"), ("Waktu prediksi", "&ndash;")]
+if img_thrq is not None:
+    status_thrq[1] = ("Ukuran foto", f"{img_thrq.width} &times; {img_thrq.height} px")
 
-        elif img_thrq is None:
-            tulis_hasil_thrq("Belum ada foto", "Hasil muncul setelah foto dipilih.", tabel_kosong_thrq())
+with kotak_hasil_thrq:
+    if gagal_thrq:
+        tulis_hasil_thrq("Berkas tidak terbaca", "Berkas ini bukan gambar yang utuh. Coba unggah foto lain.", tabel_kosong_thrq())
 
-        elif menu_thrq == "Deteksi":
-            hasil_thrq = model_thrq(img_thrq, conf=conf_thrq, verbose=False)[0]
-            status_thrq[2] = ("Waktu prediksi", f"{hasil_thrq.speed['inference']:.0f} ms")
-            # plot() mengembalikan array BGR, tanpa channels="BGR" warnanya terbalik
-            slot_gambar_thrq.image(hasil_thrq.plot(), channels="BGR", width="stretch",
-                                   caption=f"Hasil deteksi pada {keterangan_thrq}")
+    elif img_thrq is None:
+        tulis_hasil_thrq("Belum ada foto", "Hasil muncul setelah foto dipilih.", tabel_kosong_thrq())
 
-            # Urutkan dari keyakinan tertinggi
-            urut_thrq = sorted(zip(hasil_thrq.boxes.cls, hasil_thrq.boxes.conf, hasil_thrq.boxes.xyxy),
-                               key=lambda b_thrq: -float(b_thrq[1]))
-            if not urut_thrq:
-                tulis_hasil_thrq("Tidak ada sepatu terdeteksi", f"0 kotak pada ambang {ambang_teks_thrq}. Coba turunkan ambang atau pakai foto lain.",
-                                 tabel_kosong_thrq())
-            else:
-                merk_thrq = list(dict.fromkeys(hasil_thrq.names[int(b[0])] for b in urut_thrq))
-                nilai_atas_thrq = float(urut_thrq[0][1])
-                tulis_hasil_thrq(
-                    " dan ".join(merk_thrq),
-                    f"{len(urut_thrq)} kotak pada ambang {ambang_teks_thrq}",
-                    tabel_deteksi_thrq([(hasil_thrq.names[int(c)], float(p), potongan_thrq(img_thrq, k), k) for c, p, k in urut_thrq]),
-                    merk_thrq[0],
-                    catatan_hasil_thrq(merk_thrq[0], nilai_atas_thrq),
-                )
+    elif menu_thrq == "Deteksi":
+        hasil_thrq = model_thrq(img_thrq, conf=conf_thrq, verbose=False)[0]
+        status_thrq[2] = ("Waktu prediksi", f"{hasil_thrq.speed['inference']:.0f} ms")
+        # plot() mengembalikan array BGR, tanpa channels="BGR" warnanya terbalik
+        slot_gambar_thrq.image(hasil_thrq.plot(), channels="BGR", width="stretch",
+                               caption=f"Hasil deteksi pada {keterangan_thrq}")
 
-        elif not os.path.exists(JALUR_H5_THRQ):
-            slot_gambar_thrq.image(img_thrq, width="stretch", caption=keterangan_thrq[0].upper() + keterangan_thrq[1:])
-            tulis_hasil_thrq("Model belum ada", f"Berkas {JALUR_H5_THRQ} belum ada. Latih dulu lewat Latih_Klasifikasi_h5.ipynb.", tabel_kosong_thrq())
-
+        # Urutkan dari keyakinan tertinggi
+        urut_thrq = sorted(zip(hasil_thrq.boxes.cls, hasil_thrq.boxes.conf, hasil_thrq.boxes.xyxy),
+                           key=lambda b_thrq: -float(b_thrq[1]))
+        if not urut_thrq:
+            tulis_hasil_thrq("Tidak ada sepatu terdeteksi", f"0 kotak pada ambang {ambang_teks_thrq}. Coba turunkan ambang atau pakai foto lain.",
+                             tabel_kosong_thrq())
         else:
-            slot_gambar_thrq.image(img_thrq, width="stretch", caption=keterangan_thrq[0].upper() + keterangan_thrq[1:])
-            x_thrq = np.array(img_thrq.resize((224, 224)), dtype="float32")[None] / 255.0
-            model_kl_thrq = muat_klasifikasi_thrq()
-            mulai_thrq = time.perf_counter()
-            prob_thrq = model_kl_thrq.predict(x_thrq, verbose=0)[0]
-            status_thrq[2] = ("Waktu prediksi", f"{(time.perf_counter() - mulai_thrq) * 1000:.0f} ms")
-            urutan_thrq = prob_thrq.argsort()[::-1]
-            terbaik_thrq = int(urutan_thrq[0])
+            merk_thrq = list(dict.fromkeys(hasil_thrq.names[int(b[0])] for b in urut_thrq))
+            nilai_atas_thrq = float(urut_thrq[0][1])
             tulis_hasil_thrq(
-                kelas_thrq[terbaik_thrq],
-                "Satu merek untuk seluruh gambar, masukan 224 &times; 224 px",
-                tabel_klasifikasi_thrq([(kelas_thrq[i], float(prob_thrq[i])) for i in urutan_thrq]),
-                kelas_thrq[terbaik_thrq],
-                catatan_hasil_thrq(kelas_thrq[terbaik_thrq], float(prob_thrq[terbaik_thrq])),
+                " dan ".join(merk_thrq),
+                f"{len(urut_thrq)} kotak pada ambang {ambang_teks_thrq}",
+                tabel_deteksi_thrq([(hasil_thrq.names[int(c)], float(p), potongan_thrq(img_thrq, k), k) for c, p, k in urut_thrq]),
+                merk_thrq[0],
+                catatan_hasil_thrq(merk_thrq[0], nilai_atas_thrq),
             )
 
-    isi_status_thrq = "".join(f"<span>{k} <b>{v}</b></span>" for k, v in status_thrq)
-    st.markdown(f'<div class="status-thrq">{isi_status_thrq}<span class="nama-thrq">Thariq Arkan, 2308108010065</span></div>',
-                unsafe_allow_html=True)
+    elif not os.path.exists(JALUR_H5_THRQ):
+        slot_gambar_thrq.image(img_thrq, width="stretch", caption=keterangan_thrq[0].upper() + keterangan_thrq[1:])
+        tulis_hasil_thrq("Model belum ada", f"Berkas {JALUR_H5_THRQ} belum ada. Latih dulu lewat Latih_Klasifikasi_h5.ipynb.", tabel_kosong_thrq())
+
+    else:
+        slot_gambar_thrq.image(img_thrq, width="stretch", caption=keterangan_thrq[0].upper() + keterangan_thrq[1:])
+        x_thrq = np.array(img_thrq.resize((224, 224)), dtype="float32")[None] / 255.0
+        model_kl_thrq = muat_klasifikasi_thrq()
+        mulai_thrq = time.perf_counter()
+        prob_thrq = model_kl_thrq.predict(x_thrq, verbose=0)[0]
+        status_thrq[2] = ("Waktu prediksi", f"{(time.perf_counter() - mulai_thrq) * 1000:.0f} ms")
+        urutan_thrq = prob_thrq.argsort()[::-1]
+        terbaik_thrq = int(urutan_thrq[0])
+        tulis_hasil_thrq(
+            kelas_thrq[terbaik_thrq],
+            "Satu merek untuk seluruh gambar, masukan 224 &times; 224 px",
+            tabel_klasifikasi_thrq([(kelas_thrq[i], float(prob_thrq[i])) for i in urutan_thrq]),
+            kelas_thrq[terbaik_thrq],
+            catatan_hasil_thrq(kelas_thrq[terbaik_thrq], float(prob_thrq[terbaik_thrq])),
+        )
+
+isi_status_thrq = "".join(f"<span>{k} <b>{v}</b></span>" for k, v in status_thrq)
+st.markdown(f'<div class="status-thrq">{isi_status_thrq}<span class="nama-thrq">Thariq Arkan, 2308108010065</span></div>',
+            unsafe_allow_html=True)
