@@ -2,6 +2,8 @@
 
 Aplikasi Streamlit untuk mengenali merek sepatu **Adidas, Converse, dan Nike** dari foto. Dibuat untuk Laporan 4 Praktikum Pemrograman Big Data.
 
+**Aplikasi online:** https://laporan4-thariq.streamlit.app
+
 **Nama:** Thariq Arkan  
 **NPM:** 2308108010065
 
@@ -41,7 +43,7 @@ Perintah ini mencetak `OK` dan `OK klasifikasi` jika berhasil.
 2. Pilih **Create app**, lalu isi repo ini, branch `main`, dan berkas `app.py`.
 3. Di **Advanced settings**, pilih Python 3.13.
 
-`packages.txt` memasang pustaka sistem yang dibutuhkan OpenCV. Aplikasi memuat TensorFlow dan PyTorch sekaligus, jadi pemakaian memorinya cukup besar. Deploy ke Streamlit Cloud belum diuji.
+`packages.txt` memasang pustaka sistem yang dibutuhkan OpenCV. Aplikasi memuat TensorFlow dan PyTorch sekaligus, jadi pemakaian memorinya cukup besar. Aplikasi sudah berjalan di Streamlit Community Cloud.
 
 ## Dataset
 
