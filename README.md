@@ -1,8 +1,8 @@
 # Deteksi dan Klasifikasi Merek Sepatu
 
-Aplikasi Streamlit untuk mengenali merek sepatu **Adidas, Converse, dan Nike** dari foto. Dibuat untuk Laporan 4 Praktikum Pemrograman Big Data.
+Aplikasi Streamlit untuk mengenali merek sepatu **Adidas, Converse, dan Nike** dari foto. Dibuat untuk UTS Praktikum Pemrograman Big Data.
 
-**Aplikasi online:** https://laporan4-thariq.streamlit.app
+**Aplikasi online:** https://uts-thariq.streamlit.app
 
 **Nama:** Thariq Arkan  
 **NPM:** 2308108010065
@@ -21,8 +21,8 @@ Aplikasi menerima berkas JPG dan PNG. Contoh gambar ada di folder `sample_images
 Sudah diuji dengan Python 3.13.
 
 ```bash
-git clone https://github.com/thariqar23-beep/Laporan4-Streamlit.git
-cd Laporan4-Streamlit
+git clone https://github.com/thariqar23-beep/UTS-Streamlit.git
+cd UTS-Streamlit
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt

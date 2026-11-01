@@ -14,7 +14,7 @@ JALUR_H5_THRQ = "model/classifier_model.h5"
 FOLDER_CONTOH_THRQ = "sample_images"
 AMBANG_RENDAH_THRQ = 0.6                            #thrq di bawah ini hasil diberi peringatan
 MEREK_LOGO_THRQ = ["Adidas", "Converse", "Nike"]
-# Angka uji sungguhan: Laporan 4 (YOLO) dan Latih_Klasifikasi_h5.ipynb (klasifikasi)
+# Angka uji sungguhan: UTS (YOLO) dan Latih_Klasifikasi_h5.ipynb (klasifikasi)
 BUKTI_THRQ = {
     "Deteksi": "mAP50 pada data test 0,638. Dilatih dari 114 gambar, jadi hasilnya bisa keliru.",
     "Klasifikasi": "Benar 6 dari 11 gambar utuh pada data test. Dilatih dari data kecil, jadi hasilnya bisa keliru.",
@@ -91,7 +91,7 @@ tr.utama-thrq .jalur-thrq i {background: #14213d;}
 
 @st.cache_resource(show_spinner="Memuat model deteksi...")
 def muat_yolo_thrq():
-    return YOLO("model/best.pt")                    #thrq bobot terbaik dari Laporan 4
+    return YOLO("model/best.pt")                    #thrq bobot terbaik dari UTS
 
 
 @st.cache_resource(show_spinner="Memuat model klasifikasi...")
@@ -197,7 +197,7 @@ with st.container(key="bilah_thrq"):
     identitas_thrq, mode_thrq, logo_kolom_thrq = st.columns([5, 3, 3], gap="medium", vertical_alignment="center")
     identitas_thrq.markdown(
         f'<div class="identitas-thrq"><img src="{logo_thrq("usk")}" alt="Logo Universitas Syiah Kuala"><div>'
-        '<h1 class="judul-thrq">Deteksi Merk Sepatu</h1><p>Laporan 4, Praktikum Pemrograman Big Data</p></div></div>',
+        '<h1 class="judul-thrq">Deteksi Merk Sepatu</h1><p>UTS Praktikum Pemrograman Big Data</p></div></div>',
         unsafe_allow_html=True,
     )
     menu_thrq = mode_thrq.segmented_control("Mode", ["Deteksi", "Klasifikasi"], default="Deteksi",
