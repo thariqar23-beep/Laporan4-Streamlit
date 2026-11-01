@@ -1,0 +1,13 @@
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"
+primaryColor = "#141414"
+backgroundColor = "#f2f4f7"
+secondaryBackgroundColor = "#eef0f3"
+textColor = "#0a0a0a"
+borderColor = "#e6e6e6"
+baseRadius = "8px"
+baseFontSize = 14
+font = "Geist:https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&display=swap"
