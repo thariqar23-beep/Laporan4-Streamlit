@@ -1,6 +1,7 @@
 #thrq
 # Aplikasi Streamlit: deteksi objek (YOLOv8) dan klasifikasi gambar (MobileNetV2)
 import base64
+import csv
 import io
 import os
 import time
@@ -66,7 +67,7 @@ table.tabel-thrq img {display: block; width: 40px; height: 40px; object-fit: cov
 .jalur-thrq i {display: block; height: 4px; border-radius: 2px; background: #8a93a3;}
 tr.utama-thrq .jalur-thrq i {background: #14213d;}
 .catatan-thrq {font-size: 13px; color: #92400e; background: #fffbeb; border-radius: 6px; padding: 8px 10px; margin-top: 12px;}
-.bukti-thrq {font-size: 13px; color: #4a5365; line-height: 1.5; margin-top: 12px;}
+.bukti-thrq {font-size: 13px; color: #4a5365; line-height: 1.5; margin: 12px 0 4px;}
 .status-thrq {display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 12px; color: #c5cbd8; margin-top: 4px; font-variant-numeric: tabular-nums;}
 .status-thrq b {font-weight: 500; color: #ffffff;}
 .status-thrq .nama-thrq {margin-left: auto;}
@@ -158,6 +159,22 @@ def tulis_hasil_thrq(judul_thrq, sub_thrq, tabel_thrq, merk_thrq=None, catatan_t
     )
 
 
+def tombol_unduh_thrq(gambar_thrq, kolom_thrq, baris_thrq):
+    """Unduh foto hasil (PNG) dan tabel hasil (CSV). on_click="ignore" supaya halaman tidak dimuat ulang."""
+    png_thrq = io.BytesIO()
+    gambar_thrq.save(png_thrq, "PNG")
+    teks_thrq = io.StringIO()
+    tulis_thrq = csv.writer(teks_thrq)
+    tulis_thrq.writerow(kolom_thrq)
+    tulis_thrq.writerows(baris_thrq)
+    nama_thrq = f"hasil_{menu_thrq.lower()}"
+    kiri_unduh_thrq, kanan_unduh_thrq = st.columns(2, gap="small")
+    kiri_unduh_thrq.download_button("Unduh foto", png_thrq.getvalue(), f"{nama_thrq}.png", "image/png",
+                                    key="unduh_foto_thrq", on_click="ignore", width="stretch")
+    kanan_unduh_thrq.download_button("Unduh tabel (CSV)", teks_thrq.getvalue(), f"{nama_thrq}.csv", "text/csv",
+                                     key="unduh_tabel_thrq", on_click="ignore", width="stretch")
+
+
 def tabel_kosong_thrq():
     if menu_thrq == "Deteksi":
         return tabel_deteksi_thrq([(k, None, None, None) for k in kelas_thrq])
@@ -208,8 +225,13 @@ kotak_ambang_thrq = panel_kanan_thrq.container()
 
 with kiri_thrq.container(key="panel_kiri_thrq", height="stretch"):
     slot_gambar_thrq = st.container(key="kanvas_thrq").empty()
-    unggah_thrq = st.file_uploader("Foto sepatu (JPG atau PNG)", type=["jpg", "jpeg", "png"],
-                                   key=f"unggah_thrq_{st.session_state.kunci_unggah_thrq}")
+    kunci_thrq = st.session_state.kunci_unggah_thrq
+    kamera_aktif_thrq = st.toggle("Ambil foto dari kamera", key="kamera_aktif_thrq")
+    if kamera_aktif_thrq:                           #thrq kamera baru diminta setelah sakelar dinyalakan
+        unggah_thrq = st.camera_input("Foto sepatu dari kamera", key=f"kamera_thrq_{kunci_thrq}")
+    else:
+        unggah_thrq = st.file_uploader("Foto sepatu (JPG atau PNG)", type=["jpg", "jpeg", "png"],
+                                       key=f"unggah_thrq_{kunci_thrq}")
     if unggah_thrq is not None:
         st.session_state.contoh_thrq = None
     contoh_thrq = st.session_state.contoh_thrq
@@ -235,7 +257,7 @@ if sumber_thrq is not None:
         img_thrq = Image.open(sumber_thrq).convert("RGB")   #thrq PNG bisa punya kanal alfa
     except (UnidentifiedImageError, OSError):
         gagal_thrq = True
-keterangan_thrq = f"foto contoh {contoh_thrq}" if contoh_thrq else "foto yang diunggah"
+keterangan_thrq = f"foto contoh {contoh_thrq}" if contoh_thrq else ("foto dari kamera" if kamera_aktif_thrq else "foto yang diunggah")
 
 if img_thrq is None:
     slot_gambar_thrq.markdown('<div class="slot-thrq">Unggah foto atau pilih foto contoh</div>', unsafe_allow_html=True)
@@ -275,6 +297,12 @@ with kotak_hasil_thrq:
                 merk_thrq[0],
                 catatan_hasil_thrq(merk_thrq[0], nilai_atas_thrq),
             )
+            tombol_unduh_thrq(
+                Image.fromarray(hasil_thrq.plot()[..., ::-1]),      #thrq plot() BGR, PIL butuh RGB
+                ["merek", "keyakinan", "x", "y", "lebar", "tinggi"],
+                [[hasil_thrq.names[int(c)], round(float(p), 4), int(k[0]), int(k[1]), int(k[2]) - int(k[0]), int(k[3]) - int(k[1])]
+                 for c, p, k in urut_thrq],
+            )
 
     elif not os.path.exists(JALUR_H5_THRQ):
         slot_gambar_thrq.image(img_thrq, width="stretch", caption=keterangan_thrq[0].upper() + keterangan_thrq[1:])
@@ -296,6 +324,8 @@ with kotak_hasil_thrq:
             kelas_thrq[terbaik_thrq],
             catatan_hasil_thrq(kelas_thrq[terbaik_thrq], float(prob_thrq[terbaik_thrq])),
         )
+        tombol_unduh_thrq(img_thrq, ["merek", "keyakinan"],
+                          [[kelas_thrq[i], round(float(prob_thrq[i]), 4)] for i in urutan_thrq])
 
 isi_status_thrq = "".join(f"<span>{k} <b>{v}</b></span>" for k, v in status_thrq)
 st.markdown(f'<div class="status-thrq">{isi_status_thrq}<span class="nama-thrq">Thariq Arkan, 2308108010065</span></div>',

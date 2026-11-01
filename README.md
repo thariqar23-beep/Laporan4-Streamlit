@@ -14,7 +14,7 @@ Aplikasi Streamlit untuk mengenali merek sepatu **Adidas, Converse, dan Nike** d
 | Deteksi | YOLO (`model/best.pt`) | Kotak pada tiap sepatu, beserta merek dan tingkat keyakinan. Ambang keyakinan bisa diatur. |
 | Klasifikasi | MobileNetV2 (`model/classifier_model.h5`) | Satu merek untuk seluruh gambar, beserta keyakinan tiap kelas. |
 
-Aplikasi menerima berkas JPG dan PNG. Contoh gambar ada di folder `sample_images/`.
+Foto bisa diunggah (JPG atau PNG), diambil langsung dari kamera, atau dipilih dari contoh di folder `sample_images/`. Foto hasil bisa diunduh sebagai PNG, dan tabel hasil sebagai CSV.
 
 ## Menjalankan di komputer
 
